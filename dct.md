@@ -120,60 +120,77 @@ math: mathjax
 
 ---
 
-# Transformada Discreta de Cossenos (DCT)
+![bg 90%](img/dct-video1.png)
+<!-- _backgroundColor: #000000 -->
+
+<!-- _footer: from The Unreasonable Effectiveness of JPEG: A Signal Processing Approach -->
+
+---
+
+![bg 90%](img/dct-video2.png)
+
+<!-- _backgroundColor: #000000 -->
+<!-- _footer: from The Unreasonable Effectiveness of JPEG: A Signal Processing Approach -->
+
+---
+
+![bg 90%](img/dct-matrix.png)
+
+<!-- _backgroundColor: #000000 -->
+<!-- _footer: from The Unreasonable Effectiveness of JPEG: A Signal Processing Approach -->
+
+---
+
+![bg 90%](img/dct-cosseno.png)
+
+<!-- _backgroundColor: #000000 -->
+<!-- _footer: from The Unreasonable Effectiveness of JPEG: A Signal Processing Approach -->
+
+---
+
+![bg 85%](img/dct-transpose.png)
+
+<!-- _backgroundColor: #000000 -->
+<!-- _footer: from The Unreasonable Effectiveness of JPEG: A Signal Processing Approach -->
+
+---
+
+![bg 90%](img/inverse-dct.png)
+
+<!-- _backgroundColor: #000000 -->
+<!-- _footer: from The Unreasonable Effectiveness of JPEG: A Signal Processing Approach -->
+
+---
+
+# Transformada Discreta de Cossenos
+
+$$
+F(k) = \alpha(k) \sum_{n=0}^{N-1} f(n) \cos\left[\frac{\pi (2n + 1) k}{2N}\right]
+$$
+
+Em que:
+- $k = 0, 1, \dots, N-1$
+- $\alpha(k)$ is the normalization factor:
+  $$
+  \alpha(k) =
+  \begin{cases}
+    \sqrt{\frac{1}{N}}, & \text{if } k = 0, \\
+    \sqrt{\frac{2}{N}}, & \text{if } k > 0.
+  \end{cases}
+  $$
+
+---
+
+# Transformada Discreta Inversa de Cossenos
 
 <br/>
 
 $$
-F[k] = \sum_{n=0}^{N-1} f[n] \cdot \cos\left(\frac{\pi}{N}\left(n + \frac{1}{2}\right)k\right), \quad k = 0, 1, \dots, N-1.
+f(n) = \sum_{k=0}^{N-1} \alpha(k) F(k) \cos\left[\frac{\pi (2n + 1) k}{2N}\right]
 $$
 
-
-<!-- _footer: Transformada de cossenos a partir da transformada de Fourier; assumir sinal é par -->
-
----
-
-# Mudança de base
-
-----
-
-# Transformada Discreta Inversa de Cossenos
-
-
-<!-- $$
-X[k] = \sum_{n=0}^{N-1} x[n] \cdot \cos\left(\frac{\pi}{N}\left(n + \frac{1}{2}\right)k\right), \quad k = 0, 1, \dots, N-1.
-$$
-
-
-### 3. **DCT Tipo III (Inversa da DCT Tipo II)** -->
-
-$$
-f[n] = \frac{1}{2} F[0] + \sum_{k=1}^{N-1} F[k] \cdot \cos\left(\frac{\pi}{N}\left(n + \frac{1}{2}\right)k\right), \quad n = 0, 1, \dots, N-1.
-$$
-
-
----
-
-# DCT na prática!
-![bg opacity:0.15](img/impatech.jpg)
-<!-- _backgroundColor: #bfff8c -->
-
-<!-- _class: lead -->
-<!-- _paginate: false -->
-
----
-
-# Brincando com Cosseno
-
-- Calcular a transformada de cosseno de um cosseno
-- Mostrar como coeficientes mudam na prática
-
----
-
-# Exemplo com Perlin Noise
-
-- mostrar como coeficientes de baixa frequencia tem alta energia e de alta frequencia tem baixa energia.
-- Mostrar como sinal pode ser reconstruído aos poucos com alguns coeficientes.
+Em que:
+- $n = 0, 1, \dots, N-1$
 
 ---
 
@@ -379,8 +396,8 @@ $$
 
 (A): original; 
 (B): reconstruída;
-(C): magnitude da diferença
-(D): magnitude da diferença normalizada
+(C): magnitude da diferença;
+(D): magnitude da diferença normalizada.
 
 
 ---
@@ -407,10 +424,9 @@ $$
 
 # Referências
 
-- LIM, J. S. Two-Dimensional Signal and Image Processing. Prentice Hall, 1990. Páginas 165 a 179.
-
+- 📖 LIM, J. S. Two-Dimensional Signal and Image Processing. Prentice Hall, 1990. Páginas 165 a 179.
 - ▶️ Reducible. The Unreasonable Effectiveness of JPEG: A Signal Processing Approach. Disponível em: https://youtu.be/0me3guauqOU?si=xGvW6sP1Kw9DzPLK
-- Olivier Gibaru. Image Compression. Disponível em: https://www.oliviergibaru.org/courses/NA_Compress.html
+- 🔗 Olivier Gibaru. Image Compression. Disponível em: https://www.oliviergibaru.org/courses/NA_Compress.html
 
 <!-- _paginate: false -->
 
