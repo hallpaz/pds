@@ -6,6 +6,7 @@ math: mathjax
 ---
 
 <style>
+  @import url('https://fonts.googleapis.com/css2?family=Fira+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
     section {
         font-family: "Fira Sans", Arial;
     }
@@ -105,7 +106,7 @@ math: mathjax
 ----
 
 
-# Fundamentos
+# Fundamentos matemáticos
 
 <!-- _backgroundColor: #ff8aef -->
 ![bg opacity:0.15](img/impatech.jpg)
@@ -252,6 +253,17 @@ $$
 
 <!-- _footer: Image from https://www.oliviergibaru.org/courses/NA_Compress.html -->
 <!-- _paginate: false -->
+
+---
+
+# Demo disponível
+
+<a href="https://colab.research.google.com/github/hallpaz/pds/blob/main/code/image.ipynb" target="_parent"><img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab"></a>
+
+<!-- _footer: Acesse o [notebook no Google Colab](https://colab.research.google.com/github/hallpaz/pds/blob/main/code/image.ipynb). -->
+
+![bg opacity:0.10](img/impatech.jpg)
+<!-- _backgroundColor: #ccc3af -->
 
 ---
 
